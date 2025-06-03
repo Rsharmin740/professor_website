@@ -1,0 +1,171 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root colors */
+:root {
+  --primary: #004080;
+  --secondary: #0073e6;
+  --accent: #f2a900;
+  --text: #333;
+  --background: #f9f9f9;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--background);
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+/* Main */
+main {
+  inline-size: 100%;
+  max-inline-size: none; /* or just omit max-width */
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* Headings */
+h2 {
+  color: var(--primary);
+  margin-block-end: 1rem;
+}
+
+h3 {
+  color: var(--secondary);
+  margin-block-start: 1.5rem;
+  margin-block-end: 0.8rem;
+}
+
+/* Links */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Forms */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-block-start: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  inline-size: 100%;
+  padding: 0.5rem;
+  margin-block-start: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+input[type="submit"] {
+  margin-block-start: 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--secondary);
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-block-start: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {}
+  nav ul {
+    justify-content: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
